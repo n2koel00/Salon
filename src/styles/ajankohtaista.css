@@ -1,0 +1,40 @@
+.page1-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-link {
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-link:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Facebook Specific Styles */
+  .social-link.facebook {
+    color: #3b5998; /* Facebook Blue */
+  }
+  
+  /* Instagram Specific Styles */
+  .social-link.instagram {
+    color: #E1306C; /* Instagram Pink */
+  }
+  /* Prices Image Styles */
+  .price-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
