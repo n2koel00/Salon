@@ -1,77 +1,75 @@
 import React from "react";
-import "../styles/Tilat.css";
+/*import styles from "../styles/Tilat.css";*/
+import { Carousel } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import pic1 from "../components/images/1733078098213.jpg";
 import pic2 from "../components/images/1733078316788.jpg";
 import pic3 from "../components/images/1733078412420.jpg";
 
+
+/**new images required must be horizontal and not vertical */
 function Place() {
+  const carouselItemStyle = {
+    width: "100%",
+    height: "700px", // Set a fixed height
+  };
+
+  const imageStyle = {
+    objectFit: "cover", // Use 'contain' to maintain aspect ratio without stretching
+    width: "100%",
+    height: "100%",
+    borderRadius: "5px",
+  };
+
   return (
-    <div id="carouselExampleCaptions" className="carousel slide carousel-fade">
-      <div className="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="0"
-          className="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img src={pic1} className="d-block w-100" alt="..." />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img src={pic2} className="d-block w-100" alt="..." />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <img src={pic3} className="d-block w-100" alt="..." />
-          <div className="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
-      </div>
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev"
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
-    </div>
+<Carousel className="text-center" style={{ marginTop: "20px" }}>
+      <Carousel.Item style={carouselItemStyle}>
+        <Image
+          src={pic1}
+          alt="First slide"
+          style={imageStyle}
+          className="mx-auto"
+        />
+        <Carousel.Caption>
+          <h3>Huippuluokan näytönohjaimet</h3>
+          <p>
+            Tehokkaat näytönohjaimet tarjoavat upean pelikokemuksen ja nopean
+            suorituskyvyn videoeditoinnissa.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item style={carouselItemStyle}>
+        <Image
+          src={pic2}
+          alt="Second slide"
+          style={imageStyle}
+          className="mx-auto"
+        />
+        <Carousel.Caption>
+          <h3>Intel-suorittimet</h3>
+          <p>
+            Intel-prosessorit tarjoavat huippuluokan suorituskyvyn ja
+            energiatehokkuuden monipuolisiin käyttötarkoituksiin.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item style={carouselItemStyle}>
+        <Image
+          src={pic3}
+          alt="Third slide"
+          style={imageStyle}
+          className="mx-auto"
+        />
+        <Carousel.Caption>
+          <h3>AMD Ryzen -prosessorit</h3>
+          <p>
+            AMD Ryzen -sarjan prosessorit tarjoavat monipuolisen suorituskyvyn
+            pelaamiseen ja multitaskingiin.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
   );
-}
+};
 
 export default Place;

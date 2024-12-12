@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Header.css";
+import styles from "../styles/Header.css";
 import logo from "../components/images/FooniLogo.jpg"
 
 function Header() {
@@ -23,12 +23,12 @@ function Header() {
       </div>
 
       <nav className={isMenuOpen ? "nav open" : "nav"}>
-        <Link to="/page1">Ajankohtaista</Link>
-        <Link to="/page2">Hinnasto</Link>
-        <Link to="/page3">Ajanvaraus</Link>
-        <Link to="/page4">Henkilökunta</Link>
-        <Link to="/page5">Yhteystiedot</Link>
-        <Link to="/page6">Tilat</Link>
+        <Link style={{ color: "black"}} to="/page1">Ajankohtaista</Link>
+        <Link style={{ color: "black"}} to="/page2">Hinnasto</Link>
+        <Link style={{ color: "black"}} to="/page3">Ajanvaraus</Link>
+        <Link style={{ color: "black"}} to="/page4">Henkilökunta</Link>
+        <Link style={{ color: "black"}} to="/page5">Yhteystiedot</Link>
+        <Link style={{ color: "black"}} to="/page6">Tilat</Link>
       </nav>
 
       <button className="menu-toggle" onClick={toggleMenu}>

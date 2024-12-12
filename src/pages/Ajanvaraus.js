@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/ajanvaraus.css";
+import styles from "../styles/ajanvaraus.css";
 import Button from 'react-bootstrap/Button';
 
 function Reserve() {

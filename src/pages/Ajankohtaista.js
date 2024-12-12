@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/ajankohtaista.css";
+import styles from "../styles/ajankohtaista.css";
 import { FaFacebook, FaInstagram } from "react-icons/fa"; // Import icons
 import Button from 'react-bootstrap/Button';
 
